@@ -34,6 +34,9 @@
     <ClCompile Include="_Book.cpp" />
     <ClCompile Include="_Record.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{50EA338E-AA26-46FF-97DB-481FED4E9F6C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

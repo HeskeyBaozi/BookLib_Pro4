@@ -1,14 +1,14 @@
 {
-   "978-7-111-40701-0" : {
-      "Author" : "",
-      "BookName" : "Introduction to Algrithms",
+   "10086" : {
+      "Author" : "Thomas H. Cormen",
+      "BookName" : "Introduction to Algorithms",
       "CurrentAmount" : 2,
-      "ISBN" : "978-7-111-40701-0",
+      "ISBN" : "10086",
       "MaxAmount" : 5,
-      "PublishingHouse" : "",
+      "PublishingHouse" : "China Machine Press",
       "Records" : [
          {
-            "BorrowTime" : "Sun Jun 12 20:41:49 2016\n",
+            "BorrowTime" : "Sun Jun 12 21:50:14 2016\n",
             "KeeperID" : "15331097",
             "TimeLimit" : "30 days"
          }

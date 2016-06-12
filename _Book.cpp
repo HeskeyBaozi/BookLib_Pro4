@@ -7,7 +7,8 @@ _Book::_Book(const Json::Value& Book_Obj)
 {
 	bookName = Book_Obj["BookName"].asString();
 	ISBN = Book_Obj["ISBN"].asString();
-	publishingHouse = Book_Obj["PublishHouse"].asString();
+	publishingHouse = Book_Obj["PublishingHouse"].asString();
+	author = Book_Obj["Author"].asString();
 	maxAmount = Book_Obj["MaxAmount"].asInt();
 	currentAmount = Book_Obj["CurrentAmount"].asInt();
 	const Json::Value& Record_Set = Book_Obj["Records"];

@@ -23,12 +23,15 @@ public:
 	/* 跳转器 */
 	void switchor();
 protected:
+	/* 保存图书 */
 	std::map<std::string, _Book> Lib;
 	Json::Value toJson_Books() const;
 
+	/* 用户图书 */
 	std::map<std::string, User> userDataBase;
 	Json::Value toJson_Users() const;
 private:
+	/* 文件加载与储存 */
 	void load(const Json::Value& Books, const Json::Value& Users);
 	void save()const;
 
