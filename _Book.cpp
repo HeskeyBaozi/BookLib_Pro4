@@ -1,4 +1,5 @@
 #include "_Book.h"
+#include <iostream>
 using namespace std;
 
 
@@ -16,6 +17,20 @@ _Book::_Book(const Json::Value& Book_Obj)
 	}
 }
 
+_Book::_Book(const string& myBookName, 
+	const string& myISBN, 
+	const string& myAuthor, 
+	const string& myPublishHouse,
+	int Amount)
+	: bookName(myBookName),
+	ISBN(myISBN),
+	author(myAuthor),
+	publishingHouse(myPublishHouse),
+	maxAmount(Amount),
+	currentAmount(Amount)
+{
+}
+
 _Book::~_Book()
 {
 }
@@ -23,6 +38,21 @@ _Book::~_Book()
 string _Book::getISBN() const
 {
 	return ISBN;
+}
+
+string _Book::getBookName() const
+{
+	return bookName;
+}
+
+int _Book::getMaxAmount() const
+{
+	return maxAmount;
+}
+
+int _Book::getCurrentAmount() const
+{
+	return currentAmount;
 }
 
 Json::Value _Book::toJson() const
@@ -48,4 +78,9 @@ bool _Book::isOnShelf() const
 {
 	if (currentAmount == 0)return false;
 	return true;
+}
+
+void _Book::setCurrentAmount(const int newAmount)
+{
+	currentAmount = newAmount >= 0 ? newAmount : 0;
 }

@@ -7,6 +7,11 @@ User::User(const Json::Value& UserObj)
 	userID = UserObj["UserID"].asString();
 	userName = UserObj["UserName"].asString();
 	password = UserObj["PassWord"].asString();
+	Json::Value ISBNarray = UserObj["HasBorrowed"];
+	for(const auto& ISBNObj:ISBNarray)
+	{
+		hasBorrowed.push_back(ISBNObj.asString());
+	}
 }
 
 User::User(const string& myUserID, const string& myUserName, const string& myPassWord)
@@ -21,10 +26,15 @@ User::~User()
 
 Json::Value User::toJson() const
 {
-	Json::Value UserObj;
+	Json::Value UserObj = Json::objectValue;
 	UserObj["UserID"] = Json::Value(userID);
 	UserObj["UserName"] = Json::Value(userName);
 	UserObj["PassWord"] = Json::Value(password);
+	UserObj["HasBorrowed"] = Json::arrayValue;
+	for (const string& ISBN : hasBorrowed)
+	{
+		UserObj["HasBorrowed"].append(Json::Value(ISBN));	
+	}
 	return UserObj;
 }
 

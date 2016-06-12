@@ -15,10 +15,10 @@ public:
 	
 	/* 登陆 */
 	void Login();
+	void afterLogin();
 
 	/* 注册 */
 	void Register();
-
 
 	/* 跳转器 */
 	void switchor();
@@ -34,8 +34,13 @@ private:
 
 	/* IO */
 	static std::string getInput(std::string message = "");
+	static void displayFunction();
+	void displayUserInfo() const;
 	
 	/* 正在使用这个系统的用户ID */
 	std::string Current_User_ID;
+
+	/* 书籍相关 */
+	_Book createBook() const;
 };
 
