@@ -27,10 +27,13 @@
     <ClInclude Include="baseSystem.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Book.h">
+    <ClInclude Include="_Record.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="_Record.h">
+    <ClInclude Include="_Book.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,10 +47,13 @@
     <ClCompile Include="baseSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Book.cpp">
+    <ClCompile Include="_Record.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="_Record.cpp">
+    <ClCompile Include="_Book.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

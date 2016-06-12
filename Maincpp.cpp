@@ -4,5 +4,6 @@ using namespace std;
 int main()
 {
 	baseSystem sys;
+	sys.switchor();
 	return 0;
 }
